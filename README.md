@@ -1,69 +1,141 @@
-# AR Pashmina Studio — E-commerce Demo
+# 🧕 Aliya Rahmawati — Premium Hijab Store
 
-Website e-commerce untuk brand hijab pashmina viscose **AR**, terdiri dari:
+Selamat datang di **Aliya Rahmawati**, website e-commerce premium untuk brand hijab modern dengan desain elegan, clean, dan nyaman digunakan.
 
-- **Situs pelanggan** — beranda, katalog, detail produk, keranjang, checkout, konfirmasi pesanan.
-- **Admin panel** (`/admin`) — dashboard, kelola produk (CRUD), kelola pesanan (ubah status).
+✨ Menyediakan koleksi hijab berkualitas seperti **Pashmina Viscose Premium**, dengan tampilan website modern yang memudahkan pelanggan berbelanja.
 
-Situs pelanggan dan admin panel **terhubung**: keduanya membaca/menulis data yang sama lewat `localStorage` di browser (lihat `assets/js/data.js`). Jadi kalau kamu tambah/edit produk di admin, otomatis muncul di toko. Kalau ada pesanan baru dari checkout, otomatis muncul di admin.
+---
 
-> ⚠️ Ini adalah **demo/contoh**. Pembayaran (QRIS, transfer, COD) bersifat simulasi — tidak ada transaksi uang sungguhan. Data disimpan di `localStorage` browser, bukan di database sungguhan/server. Untuk produksi nyata, backend (API + database) dan payment gateway (mis. Midtrans/Xendit) perlu diintegrasikan menggantikan `data.js`.
+## 🌸 Fitur Utama
 
-## Struktur folder
+### 🛍️ Customer Website
+Website pelanggan yang lengkap dengan fitur:
 
-```
-ar-hijab-store/
-├── index.html              # Beranda
-├── shop.html                # Katalog produk
-├── product.html              # Detail produk
-├── cart.html                 # Keranjang
-├── checkout.html             # Checkout + pembayaran (demo)
-├── order-success.html        # Konfirmasi pesanan
+- 🏠 **Homepage Premium** — tampilan brand yang elegan
+- 🧕 **Katalog Produk** — melihat semua koleksi hijab
+- 🔍 **Detail Produk** — informasi lengkap produk
+- 🛒 **Shopping Cart** — keranjang belanja interaktif
+- 💳 **Checkout** — proses pembayaran praktis
+- ✅ **Order Success** — konfirmasi pesanan berhasil
+
+---
+
+### 👑 Admin Panel
+Panel admin untuk mengelola toko:
+
+- 📊 **Dashboard** — statistik penjualan
+- 📦 **Kelola Produk** — tambah/edit/hapus produk
+- 📑 **Kelola Pesanan** — update status order
+- 🔐 **Admin Login** — keamanan akses admin
+
+---
+
+## 🔄 Sinkronisasi Data
+
+Situs pelanggan dan admin panel **terhubung secara otomatis** menggunakan `localStorage`.
+
+Artinya:
+
+- Jika admin menambah produk ➜ otomatis muncul di toko
+- Jika customer checkout ➜ pesanan masuk ke admin panel
+- Semua data tersimpan otomatis di browser
+
+> ⚠️ Demo ini menggunakan `localStorage`, bukan database online.
+
+---
+
+## 📁 Struktur Folder
+
+```bash
+aliya-rahmawati-store/
+├── index.html
+├── shop.html
+├── product.html
+├── cart.html
+├── checkout.html
+├── order-success.html
 ├── admin/
-│   ├── login.html            # Login admin
-│   ├── dashboard.html        # Statistik toko
-│   ├── products.html         # CRUD produk
-│   └── orders.html           # Kelola status pesanan
+│   ├── login.html
+│   ├── dashboard.html
+│   ├── products.html
+│   └── orders.html
 ├── assets/
-│   ├── css/style.css         # Semua styling (design system)
+│   ├── css/style.css
 │   └── js/
-│       ├── data.js           # "Database" localStorage bersama
-│       ├── ui.js              # Perilaku UI situs pelanggan
-│       └── admin.js           # Auth guard + sidebar admin
+│       ├── data.js
+│       ├── ui.js
+│       └── admin.js
 └── README.md
 ```
 
-## Cara menjalankan
+---
 
-Situs ini statis (HTML/CSS/JS murni, tanpa build step), jadi tinggal buka `index.html` di browser, atau jalankan local server, misalnya:
+## 🚀 Cara Menjalankan
+
+Website ini dibuat dengan:
+
+- HTML
+- CSS
+- JavaScript
+
+Tanpa build step atau framework tambahan.
+
+Jalankan dengan:
 
 ```bash
 npx serve .
-# atau
+```
+
+atau:
+
+```bash
 python3 -m http.server 8000
 ```
 
-## Login admin (demo)
+---
 
-Buka `admin/login.html`:
+## 🔑 Login Admin
 
-- **Username:** `admin`
-- **Password:** `ar12345`
-
-## Push ke GitHub
-
-Repo git sudah disiapkan secara lokal dengan commit awal. Untuk push ke GitHub kamu:
+Masuk ke:
 
 ```bash
-git remote add origin https://github.com/USERNAME/NAMA-REPO.git
+/admin/login.html
+```
+
+Gunakan akun demo:
+
+- **Username:** `admin`
+- **Password:** `aliya123`
+
+---
+
+## ☁️ Deploy GitHub
+
+Push project ke GitHub:
+
+```bash
+git remote add origin https://github.com/USERNAME/REPO.git
 git branch -M main
 git push -u origin main
 ```
 
-Ganti `USERNAME/NAMA-REPO` dengan repo GitHub kamu. Setelah itu bisa langsung deploy gratis ke **GitHub Pages** (Settings → Pages → Deploy from branch → `main` / root).
+Lalu deploy gratis via **GitHub Pages**.
 
-## Catatan pengembangan lanjutan
+---
 
-- Ganti gambar placeholder (`placehold.co`) dengan foto produk asli.
-- Untuk data permanen multi-device, ganti `assets/js/data.js` dengan pemanggilan API ke backend + database sungguhan (mis. Laravel/Supabase, sesuai stack yang biasa kamu pakai).
-- Untuk pembayaran nyata, integrasikan Midtrans/Xendit QRIS di halaman `checkout.html`.
+## 💎 Pengembangan Selanjutnya
+
+Beberapa upgrade yang direkomendasikan:
+
+- 📸 Gunakan foto produk asli
+- 🗄️ Integrasi database online
+- 💰 Payment gateway (QRIS / Midtrans / Xendit)
+- 📱 Optimasi mobile UI
+- 🤖 Sistem notifikasi otomatis
+
+---
+
+# ✨ Aliya Rahmawati
+### Elegance in Every Layer
+
+Hijab premium untuk wanita modern yang anggun, stylish, dan percaya diri.
