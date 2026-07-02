@@ -1,92 +1,102 @@
 <div align="center">
 
-# Aliya Rahmawati Commerce Platform
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=34&pause=1000&color=FF69B4&center=true&vCenter=true&width=850&lines=Aliya+Rahmawati+Commerce+Engine;Premium+Hijab+E-Commerce+Platform;Modern+Scalable+Frontend+Architecture" />
 
-Platform e-commerce modern untuk penjualan hijab premium dengan arsitektur frontend yang scalable, responsif, dan efisien.
+<br>
 
-[![HTML5](https://img.shields.io/badge/Frontend-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)]()
-[![CSS3](https://img.shields.io/badge/UI-CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)]()
-[![JavaScript](https://img.shields.io/badge/Logic-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)]()
-[![Status](https://img.shields.io/badge/Status-Production_Ready-00C853?style=flat-square)]()
+<img src="https://img.shields.io/badge/Version-2.0_Premium-black?style=for-the-badge&logo=github"/>
+<img src="https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Architecture-Scalable-blue?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/UI-Premium-pink?style=for-the-badge"/>
+
+# 👑 ALIYA RAHMAWATI COMMERCE ENGINE
+
+### Premium Commerce Platform for Modern Fashion
+
+Platform e-commerce modern dengan arsitektur scalable, performa tinggi,  
+serta pengalaman pengguna premium untuk bisnis fashion hijab.
 
 </div>
 
 ---
 
-# Overview
+# 📌 Overview
 
-**Aliya Rahmawati Commerce Platform** adalah sistem e-commerce berbasis frontend yang dirancang untuk kebutuhan penjualan produk hijab premium.
+**Aliya Rahmawati Commerce Engine** adalah platform e-commerce modern yang dirancang untuk kebutuhan penjualan produk hijab premium dengan fokus pada:
 
-Project ini dibangun dengan fokus pada:
+- ⚡ Performa tinggi  
+- 🎨 User Interface modern  
+- 📱 Fully responsive  
+- 🧩 Struktur modular  
+- 🚀 Mudah dikembangkan  
 
-- Performa tinggi
-- UI/UX modern
-- Struktur kode modular
-- Skalabilitas pengembangan
-- Kemudahan deployment
-
-Sistem terdiri dari dua bagian utama:
+Sistem ini memiliki dua komponen utama:
 
 - **Customer Storefront** → antarmuka pelanggan
-- **Admin Dashboard** → panel manajemen toko
+- **Admin Dashboard** → panel pengelolaan toko
 
-Kedua sistem saling terhubung melalui shared data layer berbasis browser storage.
+Keduanya saling terhubung melalui shared data layer.
 
 ---
 
-# Arsitektur Sistem
+# 🏗 System Architecture
 
 ```txt
-┌──────────────────────────┐
-│ Customer Frontend        │
-│ • Homepage               │
-│ • Product Catalog        │
-│ • Cart                   │
-│ • Checkout               │
-└────────────┬─────────────┘
-             │
-             │ Shared State
-             ▼
-┌──────────────────────────┐
-│ LocalStorage Data Layer  │
-│ assets/js/data.js        │
-└────────────┬─────────────┘
-             │
-             ▼
-┌──────────────────────────┐
-│ Admin Dashboard          │
-│ • Analytics              │
-│ • Product CRUD           │
-│ • Order Management       │
-└──────────────────────────┘
+┌─────────────────────────────┐
+│ Customer Frontend           │
+│ • Homepage                  │
+│ • Product Catalog           │
+│ • Product Detail            │
+│ • Cart                      │
+│ • Checkout                  │
+└──────────────┬──────────────┘
+               │
+               │ Shared State
+               ▼
+┌─────────────────────────────┐
+│ LocalStorage Data Engine    │
+│ assets/js/data.js           │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│ Admin Dashboard             │
+│ • Analytics                 │
+│ • Product CRUD              │
+│ • Order Management          │
+└─────────────────────────────┘
 ```
 
 ---
 
-# Fitur Utama
+# ✨ Fitur Utama
 
-## Customer Side
+## 🛍 Customer Features
 
-- Menampilkan katalog produk
-- Detail produk
-- Keranjang belanja
-- Checkout
-- Konfirmasi pesanan
-
-## Admin Side
-
-- Login admin
-- Dashboard statistik
-- CRUD produk
-- Manajemen pesanan
-- Update status order
+✔ Premium Homepage  
+✔ Product Catalog  
+✔ Product Detail Page  
+✔ Shopping Cart  
+✔ Checkout System  
+✔ Order Confirmation  
 
 ---
 
-# Struktur Project
+## 👑 Admin Features
+
+✔ Secure Login  
+✔ Dashboard Analytics  
+✔ Product Management  
+✔ CRUD System  
+✔ Order Tracking  
+✔ Status Update  
+
+---
+
+# 📂 Struktur Project
 
 ```bash
-aliya-rahmawati/
+aliya-rahmawati-store/
 │
 ├── index.html
 ├── shop.html
@@ -101,19 +111,21 @@ aliya-rahmawati/
 │   ├── products.html
 │   └── orders.html
 │
-└── assets/
-    ├── css/
-    │   └── style.css
-    │
-    └── js/
-        ├── data.js
-        ├── ui.js
-        └── admin.js
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   └── js/
+│       ├── data.js
+│       ├── ui.js
+│       └── admin.js
+│
+└── README.md
 ```
 
 ---
 
-# Tech Stack
+# 💻 Tech Stack
 
 ```yaml
 Frontend:
@@ -121,7 +133,7 @@ Frontend:
   - CSS3
   - JavaScript ES6
 
-Storage:
+Data Layer:
   - Browser LocalStorage
 
 Deployment:
@@ -132,26 +144,32 @@ Deployment:
 
 ---
 
-# Data Management
+# 🧠 Data Management
 
-Sinkronisasi data dilakukan melalui:
+Sinkronisasi data dilakukan menggunakan:
 
 ```javascript
 const products = JSON.parse(
-  localStorage.getItem("products")
+    localStorage.getItem("products")
 ) || [];
 ```
 
-Mekanisme ini memungkinkan:
+Keunggulan sistem ini:
 
-- Penyimpanan data persisten
-- Sinkronisasi antar halaman
-- Update produk real-time
-- Order tracking sederhana
+- 🔄 Sinkronisasi otomatis
+- 📦 Produk update real-time
+- 🛒 Pesanan langsung masuk admin
+- ⚡ Tanpa backend tambahan
 
 ---
 
-# Menjalankan Project
+# 🚀 Menjalankan Project
+
+Clone repository:
+
+```bash
+git clone https://github.com/username/aliya-rahmawati-store.git
+```
 
 Jalankan local server:
 
@@ -167,7 +185,7 @@ python3 -m http.server 8000
 
 ---
 
-# Kredensial Admin
+# 🔐 Admin Credentials
 
 ```env
 USERNAME=admin
@@ -176,28 +194,55 @@ PASSWORD=aliya123
 
 ---
 
-# Roadmap Pengembangan
+# ☁ Deployment
 
-Versi berikutnya akan mencakup:
+Push ke GitHub:
 
-- REST API Backend
-- Database Integration
-- Payment Gateway (QRIS)
-- Authentication Hardening
-- Real-time Notification
-- Sales Analytics
+```bash
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+git branch -M main
+git push -u origin main
+```
+
+Deploy gratis via:
+
+- GitHub Pages
+- Vercel
+- Netlify
 
 ---
 
-# Author
+# 🛣 Roadmap Development
 
-**Aliya Rahmawati**  
-Founder & Product Owner
+Versi berikutnya akan mencakup:
+
+- 🔌 REST API Integration  
+- 🗄 Database Migration  
+- 💳 Payment Gateway QRIS  
+- 🔐 Security Hardening  
+- 🔔 Real-time Notification  
+- 📈 Advanced Analytics  
+
+---
+
+# 👩 Founder
+
+## Aliya Rahmawati
+
+Founder & Product Owner  
+Premium Fashion Commerce Platform
 
 ---
 
 <div align="center">
 
-Dirancang dengan standar software engineering modern.
+```bash
+> Initializing Aliya Rahmawati Commerce Engine...
+> Loading Components...
+> Connecting Data Layer...
+> System Ready ✓
+```
+
+### Built with precision, scalability, and premium experience.
 
 </div>
