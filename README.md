@@ -1,86 +1,109 @@
-# 🧕 Aliya Rahmawati — Premium Hijab Store
+<div align="center">
 
-Selamat datang di **Aliya Rahmawati**, website e-commerce premium untuk brand hijab modern dengan desain elegan, clean, dan nyaman digunakan.
+# 👑 Aliya Rahmawati
+### 🧕 Premium Hijab & Fashion Store
 
-✨ Menyediakan koleksi hijab berkualitas seperti **Pashmina Viscose Premium**, dengan tampilan website modern yang memudahkan pelanggan berbelanja.
+✨ *Elegance in Every Layer* ✨
 
----
+![HTML5](https://img.shields.io/badge/HTML5-Frontend-orange?style=for-the-badge&logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-blue?style=for-the-badge&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-Dynamic-yellow?style=for-the-badge&logo=javascript)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-## 🌸 Fitur Utama
-
-### 🛍️ Customer Website
-Website pelanggan yang lengkap dengan fitur:
-
-- 🏠 **Homepage Premium** — tampilan brand yang elegan
-- 🧕 **Katalog Produk** — melihat semua koleksi hijab
-- 🔍 **Detail Produk** — informasi lengkap produk
-- 🛒 **Shopping Cart** — keranjang belanja interaktif
-- 💳 **Checkout** — proses pembayaran praktis
-- ✅ **Order Success** — konfirmasi pesanan berhasil
+</div>
 
 ---
 
-### 👑 Admin Panel
-Panel admin untuk mengelola toko:
+# 🌸 About Project
 
-- 📊 **Dashboard** — statistik penjualan
-- 📦 **Kelola Produk** — tambah/edit/hapus produk
-- 📑 **Kelola Pesanan** — update status order
-- 🔐 **Admin Login** — keamanan akses admin
+**Aliya Rahmawati Store** adalah website e-commerce premium untuk brand hijab modern dengan desain elegan, aesthetic, dan profesional.
 
----
-
-## 🔄 Sinkronisasi Data
-
-Situs pelanggan dan admin panel **terhubung secara otomatis** menggunakan `localStorage`.
-
-Artinya:
-
-- Jika admin menambah produk ➜ otomatis muncul di toko
-- Jika customer checkout ➜ pesanan masuk ke admin panel
-- Semua data tersimpan otomatis di browser
-
-> ⚠️ Demo ini menggunakan `localStorage`, bukan database online.
+Website ini dibuat untuk memberikan pengalaman belanja online yang:
+- ⚡ Cepat
+- 🎨 Modern
+- 📱 Responsive
+- 💎 Premium
 
 ---
 
-## 📁 Struktur Folder
+# ✨ Main Features
+
+## 🛍 Customer Features
+✔️ Homepage premium  
+✔️ Product catalog  
+✔️ Product detail  
+✔️ Add to cart  
+✔️ Checkout system  
+✔️ Order confirmation  
+
+---
+
+## 👑 Admin Features
+✔️ Secure admin login  
+✔️ Dashboard analytics  
+✔️ Product management  
+✔️ Order management  
+✔️ Status update  
+
+---
+
+# 🧠 Smart Data System
+
+Project ini menggunakan:
+
+```javascript
+localStorage.setItem("products", JSON.stringify(products));
+```
+
+Keunggulannya:
+
+- 🔄 Auto sync data
+- 📦 Produk update real-time
+- 🛒 Order otomatis masuk admin panel
+
+---
+
+# 📂 Folder Structure
 
 ```bash
 aliya-rahmawati-store/
+│
 ├── index.html
 ├── shop.html
 ├── product.html
 ├── cart.html
 ├── checkout.html
 ├── order-success.html
+│
 ├── admin/
 │   ├── login.html
 │   ├── dashboard.html
 │   ├── products.html
 │   └── orders.html
+│
 ├── assets/
-│   ├── css/style.css
+│   ├── css/
+│   │   └── style.css
+│   │
 │   └── js/
 │       ├── data.js
 │       ├── ui.js
 │       └── admin.js
+│
 └── README.md
 ```
 
 ---
 
-## 🚀 Cara Menjalankan
+# 🚀 Installation
 
-Website ini dibuat dengan:
+Clone repository:
 
-- HTML
-- CSS
-- JavaScript
+```bash
+git clone https://github.com/username/aliya-rahmawati-store.git
+```
 
-Tanpa build step atau framework tambahan.
-
-Jalankan dengan:
+Run local server:
 
 ```bash
 npx serve .
@@ -94,48 +117,41 @@ python3 -m http.server 8000
 
 ---
 
-## 🔑 Login Admin
+# 🔐 Admin Login
 
-Masuk ke:
-
-```bash
-/admin/login.html
+```yaml
+Username: admin
+Password: aliya123
 ```
 
-Gunakan akun demo:
-
-- **Username:** `admin`
-- **Password:** `aliya123`
-
 ---
 
-## ☁️ Deploy GitHub
+# 💻 Tech Stack
 
-Push project ke GitHub:
-
-```bash
-git remote add origin https://github.com/USERNAME/REPO.git
-git branch -M main
-git push -u origin main
+```txt
+Frontend  : HTML + CSS + JavaScript
+Storage   : LocalStorage
+Hosting   : GitHub Pages
+Versioning: Git
 ```
 
-Lalu deploy gratis via **GitHub Pages**.
+---
+
+# 🌟 Future Upgrade
+
+- 💳 Payment Gateway (QRIS)
+- 🗄 Database Integration
+- 🤖 WhatsApp Order Bot
+- 📈 Analytics
+- 🔔 Auto Notification
 
 ---
 
-## 💎 Pengembangan Selanjutnya
+<div align="center">
 
-Beberapa upgrade yang direkomendasikan:
+# 💎 Aliya Rahmawati
+### Premium • Elegant • Modern
 
-- 📸 Gunakan foto produk asli
-- 🗄️ Integrasi database online
-- 💰 Payment gateway (QRIS / Midtrans / Xendit)
-- 📱 Optimasi mobile UI
-- 🤖 Sistem notifikasi otomatis
+Made with ❤️ for fashion business
 
----
-
-# ✨ Aliya Rahmawati
-### Elegance in Every Layer
-
-Hijab premium untuk wanita modern yang anggun, stylish, dan percaya diri.
+</div>
