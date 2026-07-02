@@ -1,72 +1,92 @@
 <div align="center">
 
-# 👑 Aliya Rahmawati
-### 🧕 Premium Hijab & Fashion Store
+# Aliya Rahmawati Commerce Platform
 
-✨ *Elegance in Every Layer* ✨
+Platform e-commerce modern untuk penjualan hijab premium dengan arsitektur frontend yang scalable, responsif, dan efisien.
 
-![HTML5](https://img.shields.io/badge/HTML5-Frontend-orange?style=for-the-badge&logo=html5)
-![CSS3](https://img.shields.io/badge/CSS3-Styling-blue?style=for-the-badge&logo=css3)
-![JavaScript](https://img.shields.io/badge/JavaScript-Dynamic-yellow?style=for-the-badge&logo=javascript)
-![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+[![HTML5](https://img.shields.io/badge/Frontend-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)]()
+[![CSS3](https://img.shields.io/badge/UI-CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)]()
+[![JavaScript](https://img.shields.io/badge/Logic-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)]()
+[![Status](https://img.shields.io/badge/Status-Production_Ready-00C853?style=flat-square)]()
 
 </div>
 
 ---
 
-# 🌸 About Project
+# Overview
 
-**Aliya Rahmawati Store** adalah website e-commerce premium untuk brand hijab modern dengan desain elegan, aesthetic, dan profesional.
+**Aliya Rahmawati Commerce Platform** adalah sistem e-commerce berbasis frontend yang dirancang untuk kebutuhan penjualan produk hijab premium.
 
-Website ini dibuat untuk memberikan pengalaman belanja online yang:
-- ⚡ Cepat
-- 🎨 Modern
-- 📱 Responsive
-- 💎 Premium
+Project ini dibangun dengan fokus pada:
 
----
+- Performa tinggi
+- UI/UX modern
+- Struktur kode modular
+- Skalabilitas pengembangan
+- Kemudahan deployment
 
-# ✨ Main Features
+Sistem terdiri dari dua bagian utama:
 
-## 🛍 Customer Features
-✔️ Homepage premium  
-✔️ Product catalog  
-✔️ Product detail  
-✔️ Add to cart  
-✔️ Checkout system  
-✔️ Order confirmation  
+- **Customer Storefront** → antarmuka pelanggan
+- **Admin Dashboard** → panel manajemen toko
+
+Kedua sistem saling terhubung melalui shared data layer berbasis browser storage.
 
 ---
 
-## 👑 Admin Features
-✔️ Secure admin login  
-✔️ Dashboard analytics  
-✔️ Product management  
-✔️ Order management  
-✔️ Status update  
+# Arsitektur Sistem
 
----
-
-# 🧠 Smart Data System
-
-Project ini menggunakan:
-
-```javascript
-localStorage.setItem("products", JSON.stringify(products));
+```txt
+┌──────────────────────────┐
+│ Customer Frontend        │
+│ • Homepage               │
+│ • Product Catalog        │
+│ • Cart                   │
+│ • Checkout               │
+└────────────┬─────────────┘
+             │
+             │ Shared State
+             ▼
+┌──────────────────────────┐
+│ LocalStorage Data Layer  │
+│ assets/js/data.js        │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│ Admin Dashboard          │
+│ • Analytics              │
+│ • Product CRUD           │
+│ • Order Management       │
+└──────────────────────────┘
 ```
 
-Keunggulannya:
+---
 
-- 🔄 Auto sync data
-- 📦 Produk update real-time
-- 🛒 Order otomatis masuk admin panel
+# Fitur Utama
+
+## Customer Side
+
+- Menampilkan katalog produk
+- Detail produk
+- Keranjang belanja
+- Checkout
+- Konfirmasi pesanan
+
+## Admin Side
+
+- Login admin
+- Dashboard statistik
+- CRUD produk
+- Manajemen pesanan
+- Update status order
 
 ---
 
-# 📂 Folder Structure
+# Struktur Project
 
 ```bash
-aliya-rahmawati-store/
+aliya-rahmawati/
 │
 ├── index.html
 ├── shop.html
@@ -81,29 +101,59 @@ aliya-rahmawati-store/
 │   ├── products.html
 │   └── orders.html
 │
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   └── js/
-│       ├── data.js
-│       ├── ui.js
-│       └── admin.js
-│
-└── README.md
+└── assets/
+    ├── css/
+    │   └── style.css
+    │
+    └── js/
+        ├── data.js
+        ├── ui.js
+        └── admin.js
 ```
 
 ---
 
-# 🚀 Installation
+# Tech Stack
 
-Clone repository:
+```yaml
+Frontend:
+  - HTML5
+  - CSS3
+  - JavaScript ES6
 
-```bash
-git clone https://github.com/username/aliya-rahmawati-store.git
+Storage:
+  - Browser LocalStorage
+
+Deployment:
+  - GitHub Pages
+  - Vercel
+  - Netlify
 ```
 
-Run local server:
+---
+
+# Data Management
+
+Sinkronisasi data dilakukan melalui:
+
+```javascript
+const products = JSON.parse(
+  localStorage.getItem("products")
+) || [];
+```
+
+Mekanisme ini memungkinkan:
+
+- Penyimpanan data persisten
+- Sinkronisasi antar halaman
+- Update produk real-time
+- Order tracking sederhana
+
+---
+
+# Menjalankan Project
+
+Jalankan local server:
 
 ```bash
 npx serve .
@@ -117,41 +167,37 @@ python3 -m http.server 8000
 
 ---
 
-# 🔐 Admin Login
+# Kredensial Admin
 
-```yaml
-Username: admin
-Password: aliya123
+```env
+USERNAME=admin
+PASSWORD=aliya123
 ```
 
 ---
 
-# 💻 Tech Stack
+# Roadmap Pengembangan
 
-```txt
-Frontend  : HTML + CSS + JavaScript
-Storage   : LocalStorage
-Hosting   : GitHub Pages
-Versioning: Git
-```
+Versi berikutnya akan mencakup:
+
+- REST API Backend
+- Database Integration
+- Payment Gateway (QRIS)
+- Authentication Hardening
+- Real-time Notification
+- Sales Analytics
 
 ---
 
-# 🌟 Future Upgrade
+# Author
 
-- 💳 Payment Gateway (QRIS)
-- 🗄 Database Integration
-- 🤖 WhatsApp Order Bot
-- 📈 Analytics
-- 🔔 Auto Notification
+**Aliya Rahmawati**  
+Founder & Product Owner
 
 ---
 
 <div align="center">
 
-# 💎 Aliya Rahmawati
-### Premium • Elegant • Modern
-
-Made with ❤️ for fashion business
+Dirancang dengan standar software engineering modern.
 
 </div>
